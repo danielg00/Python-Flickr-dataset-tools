@@ -3,7 +3,7 @@ import pandas as pd
 from tqdm import tqdm
 
 
-class Flickr8kAPI:
+class Flickr_Tools:
 
     def __init__(self, path_to_tokens, path_to_imgs):
         self._path_to_tokens = path_to_tokens
@@ -56,7 +56,6 @@ class Flickr8kAPI:
                 x = input("Cannot find image {0} , Remove? (y/n): ".format(i))
                 if x == 'y':
                     dont_exist.append(i)
-
         for i in dont_exist:
             del self.tokens2dict[i]
 
